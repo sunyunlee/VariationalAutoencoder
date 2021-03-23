@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" href="/css/post.css"/>
+        {% include mathjax.html %}
+    </head>
+    <body>
+        {% include navbar.html %}
+        <div class="content">
+            <div class="front-matter">
+                <div class="wrap">
+                    <h1> {{ page.title }} </h1>
+                    <h5>{{ page.readtime}} minute read</h3>
+                    <h4> {{ page.subtitle }} </h4>
+                    <div class="credits">
+                        <h4>Credits</h4>
+                        <p> {{ page.credits }} </p>
+                    </div>
+                    <div class="bylines">
+                        <div class="byline">
+                            <h3>Published</h3>
+                            <p> {{ page.date | date: '%B %d, %Y' }}</p>
+                            <h3>Last Modified</h3>
+                            <p> {{ page.moddate | date: '%B %d, %Y' }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class='clear'></div>
+            </div>
+
+            <div class="wrap article">
+                <!-- When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+  \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\] -->
+                {{ content }}
+            </div>
+            
+            <div class="wrap bibliography-wrapper">
+                <h3>References</h3>
+                <ul class="bibliography">
+                    {% for ref in page.references %}
+                        <li>{{ ref }}</li>
+                    {% endfor %}
+                </ul>                
+            </div>
+            
+        </div>
+    </body>
+    {% include footer.html %}
+</html>
+
+
+<!-- <html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MathJax example</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+<p>
+  When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+  \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
+</p>
+</body>
+</html> -->
