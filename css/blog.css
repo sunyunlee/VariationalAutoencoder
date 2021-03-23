@@ -1,0 +1,33 @@
+.footer-wrapper {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    width: 100%;
+    bottom: 0;
+    padding: 10px 10px 10px 10px;
+    position: fixed;
+    height: 60px
+}
+.footer-wrapper .wrap {
+    font-size: 10px;
+}
+.nav {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .nav a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    border-bottom: none;
+    font-size: 12px;
+  }
+  .nav a:hover {
+    font-weight: bold;
+  }
+  .nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
