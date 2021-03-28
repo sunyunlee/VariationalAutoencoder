@@ -8,9 +8,8 @@ plugins:
   - jekyll-scholar
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-katex
+  # - jekyll-katex
 kramdown:
   math_engine: mathjax
 markdown: kramdown
 usemathjax: true
-katex:
