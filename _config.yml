@@ -3,7 +3,7 @@ highlighter: rouge
 permalink: /blog/:year/:month/:day/:title/
 environment: prod
 # baseurl: /
-url: https://sunyunlee.github.io/VariationalAutoencoder/
+url: https://sunyunlee.github.io
 plugins:
   - jekyll-scholar
   - jekyll-sitemap
